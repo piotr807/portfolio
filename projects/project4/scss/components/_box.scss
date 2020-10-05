@@ -1,0 +1,92 @@
+   .box-header{
+        text-align: center;
+
+        .header-content {
+            color: $font-lightgray;
+            font-weight: 300;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            max-width: 650px;
+        }
+    }
+
+    .box-container {
+        @include flexbox;
+        @include flex-align (space-between, center);
+        text-align: center;
+
+        .box {
+            max-width: 550px;
+            border: 1px solid #e2e5ea;
+            border-radius: 2px;
+            margin: 0 auto;
+            transition: box-shadow .3s;
+            margin-top: 40px;
+
+            &:hover {
+                box-shadow: 0 5px 20px #f0f0f0;
+            }
+
+            img {
+                height: auto;
+                width: 100%;
+                padding: 20px 20px;
+                padding-bottom: 0;
+            }
+
+            .above-description {
+                text-transform: uppercase;
+                font-size: 12px;
+                color: $font-lightgray;
+                margin-top: 30px;
+                letter-spacing: 1px;
+                font-weight: 300;
+            }
+            
+            .box-description {
+                color: $font-lightgray;
+                font-weight: 300;
+                margin-bottom: 26px;
+                padding: 0 30px;
+                margin: 0 auto;
+                margin-top: 30;
+            }
+
+            a {
+                margin: 50px 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media all and (min-width: $media-large) {
+            .box {
+                width: 30%;
+                margin-bottom: 0;
+                margin-top: 0;
+
+                .box-description {
+                    padding: 0 25px;
+                }
+            }
+        }
+   
+
+        @media all and (max-width: $media-extra-small) {
+            .box {
+                width: 100%;
+            
+                .box-description {
+                    padding: 0;
+                }
+
+                img {
+                    height: auto;
+                    width: 100%;
+                    padding: 0;
+                }
+            }        
+        }
+    }

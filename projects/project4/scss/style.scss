@@ -1,0 +1,19 @@
+@import 'utilities/variables';
+@import 'utilities/mixin';
+
+@import 'base/normalize';
+@import 'base/global';
+
+@import 'layout/nav';
+@import 'layout/header';
+@import 'layout/about';
+@import 'layout/services';
+@import 'layout/team';
+@import 'layout/appointment';
+@import 'layout/contact';
+@import 'layout/footer';
+
+
+@import 'components/buttons';
+@import 'components/form';
+@import 'components/box';

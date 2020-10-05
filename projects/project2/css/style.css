@@ -1,0 +1,82 @@
+.main {
+    background-image: url('../img/bg-pattern.png'), linear-gradient(to right, red, purple);
+}
+
+section{
+    padding: 0;
+}
+
+button.start-now, button.get-start {
+    border-radius: 25px 25px;
+    font-size: 10px;
+}
+
+.phone-container {
+    width: 150px;
+    height: 302px;
+    position: relative;
+}
+
+.screen {
+    width: 132px;
+    height: 233px;
+    position: absolute;
+    top:34px;
+    left:9px;
+}
+
+hr {
+    width: 10%;
+}
+
+i.feature-icon {
+    color:purple;
+}
+
+.feature-item-text {
+    font-size: 13px; 
+    font-weight: 200;
+}
+
+.google-play, .apple-store {
+    width: 100px;
+    height: 32px;
+}
+
+.contact {
+    background-image: url('../img/bg-cta.jpg');
+    background-position:center ;
+    background-size: cover;
+}
+.fa-stack {
+    margin: 0 3px;
+}
+.fa-stack-1x {
+    border-radius: 50%;
+    color:white;
+}
+.icon-facebook>.fa-stack-1x  {
+    background-color:#3b5998;
+}
+.icon-twitter>.fa-stack-1x  {
+    background-color:#00aced;
+}
+.icon-gplus>.fa-stack-1x {
+    background-color:#dd4b39;
+}
+
+@media (max-width: 768px) {
+    .google-play, .apple-store {
+        margin:auto;
+    }
+}
+@media (min-width: 768px) {
+    .google-play {
+        margin-left:auto;
+    }
+    .apple-store {
+        margin-right:auto;
+    }
+}
+
+

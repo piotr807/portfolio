@@ -1,0 +1,111 @@
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    padding: 12px 0;
+
+    .nav-holder {
+        @include flexbox;
+        justify-content: space-between;    
+    }
+
+    .logo {
+        height: 50px;
+        display: inline-block;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    %menu-icons {
+        font-size: 28px;
+        line-height: 50px;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        @extend %menu-icons;
+        color: $main-blue;
+        text-align: right;
+        height: 50px;
+    }
+
+    .close-menu {
+        @extend %menu-icons;
+        color: #fff;
+    }
+
+    .open-menu {
+        position: fixed;
+        background-color: $main-blue;
+        top: 0;
+        right: 0;
+        max-width: 480px;
+        width: 480px;
+        text-align: right;
+        display: none;
+        padding: 12px 23px;
+
+        &.open {
+            display: block;
+        }
+
+        .menu {
+            list-style: none;
+
+            .menu-item {
+                font-size: 50px;
+                text-transform: uppercase;
+                padding: 20px 0;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    @media all and (min-width: $media-large ) {
+        .nav-holder {
+            justify-content: flex-start;
+
+            .logo {
+                height: 80px;
+            }
+        }
+
+
+        %menu-icons {
+            display: none;
+        }
+        .open-menu {
+            display: block;
+            position: static;
+            background-color: transparent;
+            width: auto;
+            max-width: 100%;
+            align-self: flex-start;
+
+            .menu {
+                background-color: #fff;
+
+                .menu-item {
+                    display: inline-block;
+                    padding: 0 20px;
+                    font-size: 15px;
+
+                    a {
+                        color: $main-purple;
+                        font-weight: 700;
+                    }
+                }
+
+            }
+
+        }
+    }
+}

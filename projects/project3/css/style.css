@@ -1,0 +1,252 @@
+/*Main styling*/
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+hr{
+    width: 70px;
+    border: 1px solid #007bff;
+    border-bottom: 0;
+}
+.button{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #333;
+    border: 1px solid #007bff;
+    padding: 14px 20px;
+    display: inline-block;
+    transition: all 0.3s;
+    margin: auto;
+    background-color: transparent;
+    cursor: pointer;
+}
+.button:hover{
+    color:#f2f1ed;
+    background-color: #007bff;
+}
+.container{
+    max-width: 1170px;
+    margin:0 auto;
+}
+section{
+    padding: 120px 0;
+}
+.section-header{
+    margin-bottom: 75px;
+}
+.section-header h2{
+    color: #333;
+    font-size: 1.9em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/*Header styling*/
+.main-header{
+    background-image: url(../img/header.jpg);
+    height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-header .main-header-content{
+    text-align: center;
+}
+.main-header .main-header-content h1{
+    font-size: 4.2em;
+    color: #007bff;
+    text-transform: uppercase;
+    margin: 0;
+}
+.main-header .main-header-content p{
+    font-size: 1.3em;
+    color: #333;
+    margin: 40px 0;
+}
+.main-header .main-header-content p span{
+    color: #007bff;
+}
+/*Menu styling*/
+.main-menu{
+    background-color: #007bff;
+}
+#drop-nav{
+    display: none;
+}
+label[for="drop-nav"]{
+    display: none;
+}
+.main-menu ul{
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+.main-menu ul .menu-item{
+    display: inline-block;
+    margin-top: 0 10px;
+}
+.main-menu ul .menu-item a{
+    text-decoration: none;
+    color: #f2f1ed;
+    text-transform: uppercase;
+    padding: 14px 20px;
+    display: block;
+    transition: all 0.3s;
+}
+.main-menu ul .menu-item a:hover{
+    color: #007bff;
+    background-color: #f2f1ed;
+}
+/*About styling*/
+.about{
+    text-align: center;
+}
+.about .about-img{
+    border-radius: 50%;
+}
+.about p{
+    max-width: 700px;
+    margin: 40px auto 30px auto;
+    counter-reset: #777;
+    line-height: 1.4;
+}
+/*Portfolio styling*/
+.portfolio{
+    background-color: #f2f1ed;
+}
+.portfolio-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio-wrapper .portfolio-item{
+    flex-basis: 25%;
+    height: 200px;
+    position: relative;
+}
+.portfolio-wrapper .portfolio-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.portfolio-wrapper .portfolio-item h3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 123, 255, 0.8);
+    margin: 0;
+    text-align: center;
+    line-height: 200px;
+    color: #f2f1ed;
+    font-weight: 300;
+    font-size: 3em;
+    opacity: 0;
+    transition :all 0.3s ;
+}
+.portfolio-wrapper .portfolio-item h3:hover{
+    opacity: 1;
+}
+/*Contact styling*/
+.contact form{
+    max-width: 700px;
+    margin: 40px auto 30px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact input[type="text"],
+.contact input[type="email"]{
+    flex-basis: 48%;
+    padding: 15px;
+    margin-bottom: 15px;
+
+} 
+.contact textarea{
+    flex-basis: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    height: 100px;
+}
+.social-links{
+    margin-top: 75px;
+    text-align: center;
+}
+.social-link{
+    font-size: 2.5em;
+    color: #007bff;
+    transition: all 0.3s;
+    display: inline;
+    margin:0 20px;
+}
+.social-links .social-link:hover{
+    color: #777;
+}
+/*Footer styling*/
+.footer{
+    background-color: #f2f1ed;
+    padding: 30px;
+    text-align: center;
+    color: #777;
+}
+/*Responsibility*/
+@media (max-width: 1200px){
+    .container{
+        max-width: 992px;
+    }
+}
+@media (max-width: 992px){
+    .container{
+        max-width: 768px;
+    }
+    .portfolio-wrapper .portfolio-item{
+    flex-basis: 50%;
+    }
+}
+@media (max-width: 768px){
+    .container{
+        max-width: 95%;
+    }
+    .portfolio-wrapper .portfolio-item{
+    flex-basis:100%;
+    }
+}
+@media (max-width: 480px){
+    .main-header .main-header-content h1{
+    font-size: 3em;
+    }
+    .about .about-img{
+    max-width: 200px;
+    max-height: 200px;
+    }
+    .contact input[type="text"],
+    .contact input[type="email"]{
+    flex-basis: 100%;
+    }
+    label[for="drop-nav"]{
+        display: block;
+        padding: 14px 20px;
+        color: #f2f1ed;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        text-align: right;
+        cursor: pointer;
+    }
+    .main-menu ul{
+        display: none;
+    }
+    #drop-nav:checked + ul{
+        display: block;
+    }
+    .main-menu ul .menu-item{
+        display: block;
+        text-align: right;
+        margin: 0;
+    }
+}

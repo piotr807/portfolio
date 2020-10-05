@@ -1,0 +1,65 @@
+.services {
+
+    .services-container {
+        @include flexbox;
+
+        .service {
+            height: 340px;
+            flex-basis: 100%;
+            position: relative;
+            margin-bottom: 20px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .service-hover {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                background-color: rgba(27, 164, 206, 0.6);
+                text-align: center;
+                @include flexbox;
+                @include flex-align (center, center);
+                flex-direction: column;
+                transition: all 0.3s;
+
+                img {
+                    height: auto;
+                    width: 60px;
+                    margin: 0 auto;
+                }
+
+                h3 {
+                    color: #fff;
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        @media all and (min-width: $media-large ) {
+            .service {
+                max-width: 25%;
+                height: 570px;
+                margin-bottom: 0;
+     
+            }
+        }
+    
+        @media all and (min-width: $media-medium) {
+            .service {
+                flex-basis: 50%;
+                height: 570px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

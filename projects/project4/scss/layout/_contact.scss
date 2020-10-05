@@ -1,0 +1,109 @@
+.contact {
+    background-color: $main-blue;
+
+    .container {
+        color: #fff;
+
+    .contact-header{
+        text-align: center;
+
+        h2 {
+            color:#fff;
+            }
+        }
+       
+        .header-content {
+            font-weight: 300;
+            margin: 0 auto;
+            max-width: 650px;
+        }
+    }  
+    .contact-content {
+        @include flexbox;
+        @include flex-align (space-between, center);
+
+        .contact-data {
+            width: 100%;
+            @include flexbox;
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 50px 0;
+
+            .data-item {
+                width: 100%;
+
+                img {
+                    height: 40px;
+                }
+
+                .data-description{
+                    display: inline-block;
+                    max-width: 200px;
+                    text-align: left;
+                    margin-left: 40px;
+                }
+   
+            &:last-child img {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            }
+        
+        }
+
+        .contact-form {
+            width: 100%;
+
+            textarea {
+                margin-bottom: 30px;
+            }
+        }
+    } 
+
+    @media all and (min-width: $media-large) {
+        .contact-content {
+            
+            .contact-data {
+                margin: 90px 0;
+                width: 40%;
+
+                .data-item {
+    
+                    img {
+                        height: 20px;
+                        margin: 10px 0;
+                    }
+                }
+            }
+
+            .contact-form {
+                width: 50%;
+                padding-top: 100px;
+            }
+
+            input {
+                margin-bottom: 25px;
+            }
+            
+            textarea {
+                margin-bottom: 30px;
+            }
+    }
+    }
+
+    @media all and (max-width: $media-large) {
+        .contact-form {
+            width: 100%;
+            text-align: center;
+
+            textarea {
+                margin-bottom: 30px;
+            }
+            
+            input, textarea {
+                border: 1px solid #fff;
+            }
+        }
+    }
+}
